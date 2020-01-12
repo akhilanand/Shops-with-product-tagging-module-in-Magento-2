@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+<body>
+ <!-- <referenceContainer name="product.info.form.content">
+     <block class="Akhil\Shop\Block\Catalog\Product\View" name="product.info.shops" after="product.info.addtocart"
+template="Akhil_Shop::catalog/product/shops.phtml">
+     </block>
+ </referenceContainer> -->
+
+<referenceContainer name="content.top.most">
+    <container name="custom.block.sec" htmlTag="div" htmlClass="container-shop">
+        <block class="Akhil\Shop\Block\Catalog\Product\View" name="shop" template="Akhil_Shop::catalog/product/shops.phtml" />
+    </container>
+</referenceContainer>
+
+<move element="custom.block.sec" destination="content" before="additional" />
+
+</body>
+</page>

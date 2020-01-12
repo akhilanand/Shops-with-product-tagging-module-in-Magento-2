@@ -1,0 +1,27 @@
+{
+    "name": "akhil/shop",
+    "description": "Product grid example for Magento 2",
+    "type": "magento2-module",
+    "version": "0.0.1",
+    "authors": [
+        {
+            "name": "akhil",
+            "email": "akhilanand05@gmail.com",
+        }
+    ],
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "require": {
+        "php": "~5.5.0|~5.6.0|~7.0.0",
+        "magento/magento-composer-installer": "*",
+        "magento/framework": "~100.0"
+    },
+    "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "Akhil\\Shop\\": ""
+        }
+    }
+}

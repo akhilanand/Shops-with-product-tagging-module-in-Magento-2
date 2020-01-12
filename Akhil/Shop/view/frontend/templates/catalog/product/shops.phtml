@@ -1,0 +1,16 @@
+<?php  $shops = $block->getShops();  ?>
+<?php if($block->isEnabled()) : ?>
+<div style="width: 100%; background-color: #ccc; padding: 5px 10px 10px 20px; "><h3>Shops</h3></div>
+<div>
+	<?php 
+		foreach ($shops as $shop) { 
+		$url  = "http://maps.googleapis.com/maps/api/geocode/json?latlng=".$shop->getLatitude().",".$shop->getLongitude()."&sensor=false";
+	?>
+	<div style="border: 1px solid #000; padding: 10px; margin: 10px 10px 10px 0px; float: left; width: 20%;">
+		<div><?php echo $shop->getName() ?> </div>
+		<div><?php echo $shop->getAddress() ?> </div>
+		<div><a href="<?php echo $url ?>" targe="_blank">Show On Map</a> </div>
+</div>
+	<?php } ?>
+</div>
+<?php endif ?>
